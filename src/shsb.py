@@ -1,13 +1,13 @@
-import os.path
+from os.path import exists
 
 import pip
 
-DEPENDENCIES = "beautifulsoup"
+DEPENDENCIES = []
 
 
 class SHSB:
     def _is_shsb(self):
-        return os.path.exists("N:/.packages")  # TODO: Find a different way to check if SHSB machine. Env variable?
+        return exists("N:/.packages")  # TODO: Find a different way to check if SHSB machine. Env variable?
 
     def install_dependencies(self):
         if not self._is_shsb():

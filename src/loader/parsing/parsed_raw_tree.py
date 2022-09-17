@@ -1,12 +1,11 @@
-from bs4 import BeautifulSoup, Tag
+from typing import List
 
-from .child_parser import ChildParser
+from .parsed_child import ParsedChild
 
 
 class ParsedRawTree:
-    def __init__(self, html: BeautifulSoup):
-        self._html = html
-        self._children = [ChildParser(child).parse() for child in self._html.children if type(child) is Tag]
+    def __init__(self, children: List[ParsedChild]):
+        self._children = children
 
     @property
     def children(self):

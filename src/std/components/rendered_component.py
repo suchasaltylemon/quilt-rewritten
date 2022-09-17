@@ -1,0 +1,2 @@
+class RenderedComponent:
+    pass

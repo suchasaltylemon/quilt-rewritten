@@ -1,9 +1,5 @@
-@import("Example")
-
 <quilt>
-    <label DisplayText="Hello" class="HelloText">
-        <button DisplayText="ClickMe" id="ClickButton"></button>
-        <Example></Example>
-        <!-- Hello World-->
+    <label DisplayText="Hello" class="Greeting">
+        <button DisplayText="ClickMe" OnClick="handle_click" class="ButtonClickHandler"></button>
     </label>
 </quilt>
